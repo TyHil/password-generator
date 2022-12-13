@@ -113,14 +113,15 @@ input, button {
   background-color: var(--dark1);
   color: var(--light0);
   border: none;
-  border-radius: 1rem;
-  padding: 0.5rem;
+  border-radius: 1.5rem;
   transition: background-color 200ms;
 }
 input:hover, button:hover {
   background-color: var(--dark2);
 }
 input {
+  line-height: 1.6rem;
+  padding: 0.75rem 1rem 0.65rem 1rem;
   box-sizing: border-box;
   width: 100%;
   max-width: 75ch;
@@ -131,6 +132,8 @@ input {
   gap: 0.5rem;
 }
 button {
+  line-height: 1.25rem;
+  padding: 0.5rem 0.75rem 0.45rem 0.75rem;
   flex: 1;
   word-wrap: break-word;
 }
