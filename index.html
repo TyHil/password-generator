@@ -27,7 +27,7 @@
   
   <!-- Link Tags -->
   <link rel="icon" href="/images/tabicon.png" />
-  <link href="/password-generator/style.css" rel="stylesheet" type="text/css" />
+  <link href="password-generator/style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -36,14 +36,16 @@
     <a id="byLine" href="/">Tyler Gordon Hill</a>
   </header>
   <main>
-    <input id="display" type="text" readonly>
-    <input id="length" type="number" value="16" min="8" max="32">
-    <div id="buttons">
-      <button id="reset">Reset</button>
-      <button id="generate">Generate</button>
+    <div id="centered">
+      <input id="display" type="text" readonly>
+      <input id="length" type="number" value="16" min="8" max="32">
+      <div id="buttons">
+        <button id="copy">Copy</button>
+        <button id="generate" class="featured">Generate</button>
+      </div>
     </div>
   </main>
-  <script src="/password-generator/script.js"></script>
+  <script src="password-generator/script.js"></script>
 </body>
 
 </html>
