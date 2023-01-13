@@ -93,6 +93,16 @@ body {
   font-family: Tahoma, sans-serif;
   background-color: var(--dark0);
   color: var(--light0);
+  overflow-y: hidden;
+}
+input {
+  font-family: monospace;
+}
+button {
+  font-family: Tahoma, sans-serif;
+}
+input, button {
+  font-size: 1rem;
 }
 
 
@@ -163,7 +173,7 @@ main {
 }
 #centered {
   width: 100%;
-  max-width: 75ch;
+  max-width: 65ch;
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -183,11 +193,11 @@ input:hover, input:focus-visible, button:hover, button:focus-visible, .select {
 
 #display {
   line-height: 1.6rem;
-  padding: 0.75rem 1rem 0.65rem 1rem;
+  padding: 0.7rem 1rem 0.7rem 1rem;
 }
 #length {
   line-height: 1rem;
-  padding: 0.5rem 0.75rem 0.4rem 0.75rem;
+  padding: 0.45rem 0.75rem 0.45rem 0.75rem;
 }
 
 #buttons {
@@ -198,7 +208,7 @@ input:hover, input:focus-visible, button:hover, button:focus-visible, .select {
 }
 button {
   line-height: 1rem;
-  padding: 0.5rem 0.75rem 0.4rem 0.75rem;
+  padding: 0.45rem 0.75rem 0.45rem 0.75rem;
   word-wrap: break-word;
   cursor: pointer;
 }
@@ -219,15 +229,18 @@ button {
   transform-style: preserve-3d;
 }
 @keyframes bounce {
-  0%, 100% {
-    transform: translate3d(0, 0, 0);
-  }
-  50% {
-    transform: translate3d(0, 0, 4rem);
-  }
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(0, 0, 4rem); }
 }
-#centered.bounce #display, #centered.bounce #length, #centered.bounce #copy, #centered.bounce #generate {
+#centered.bounce #length, #centered.bounce #copy, #centered.bounce #generate {
    animation: bounce 400ms;
+}
+@keyframes fade {
+  0%, 100% { color: var(--light0); }
+  50% { color: var(--dark1); }
+}
+#centered.bounce #display {
+   animation: bounce 400ms, fade 400ms;
 }
 #centered.bounce #display { animation-delay: calc(var(--delay) * 3); }
 #centered.bounce #length { animation-delay: calc(var(--delay) * 2); }
@@ -237,19 +250,38 @@ button {
 
 
 /* Copy */
+
+#display {
+  box-sizing: border-box;
+}
 @keyframes copyOut {
   0% { transform: translate3d(0, 0, 0); }
   20%, 30% {
     transform: translate3d(0, 0, 4rem);
+    width: 100%;
   }
-  50%, 100% {
+  80%, 100% {
     transform: translate3d(0, var(--y, 200px), 4rem);
+    width: 20%;
   }
 }
 @keyframes copyIn {
   0% { opacity: 0; }
   100% { opacity: 1; }
 }
-#display.copy {
+#centered.copy #display {
   animation: copyOut 1000ms, copyIn 500ms 1000ms;
+}
+@keyframes hide {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  33.33%, 66.66% {
+    transform: translate3d(0, 0, -1rem);
+    opacity: 0.8;
+  }
+}
+#centered.copy #length, #centered.copy #copy, #centered.copy #generate {
+  animation: hide 1500ms;
 }
