@@ -191,7 +191,7 @@ input:hover, input:focus-visible, button:hover, button:focus-visible, .select {
   background-color: var(--dark2);
 }
 
-#display {
+#display, butto {
   line-height: 1.6rem;
   padding: 0.7rem 1rem 0.7rem 1rem;
 }
@@ -207,8 +207,6 @@ input:hover, input:focus-visible, button:hover, button:focus-visible, .select {
   gap: 0.5rem;
 }
 button {
-  line-height: 1rem;
-  padding: 0.45rem 0.75rem 0.45rem 0.75rem;
   word-wrap: break-word;
   cursor: pointer;
 }
