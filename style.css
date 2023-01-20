@@ -191,20 +191,24 @@ input:hover, input:focus-visible, button:hover, button:focus-visible, .select {
   background-color: var(--dark2);
 }
 
-#display, button {
+.tall {
   line-height: 1.6rem;
   padding: 0.7rem 1rem 0.7rem 1rem;
 }
-#length {
+.short {
   line-height: 1rem;
   padding: 0.45rem 0.75rem 0.45rem 0.75rem;
 }
 
-#buttons {
+.sideways {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 0.5rem;
+}
+#length, #wishlist {
+  flex: 1;
+  min-width: 0;
 }
 button {
   word-wrap: break-word;
@@ -222,7 +226,7 @@ button {
   perspective: 1000px;
   --delay: 100ms;
 }
-#buttons {
+.sideways {
   perspective: inherit;
   transform-style: preserve-3d;
 }
@@ -230,7 +234,7 @@ button {
   0%, 100% { transform: translate3d(0, 0, 0); }
   50% { transform: translate3d(0, 0, 4rem); }
 }
-#centered.bounce #length, #centered.bounce #copy, #centered.bounce #generate {
+#centered.bounce #length, #centered.bounce #wishlist, #centered.bounce #copy, #centered.bounce #generate {
    animation: bounce 400ms;
 }
 @keyframes fade {
@@ -240,8 +244,9 @@ button {
 #centered.bounce #display {
    animation: bounce 400ms, fade 400ms;
 }
-#centered.bounce #display { animation-delay: calc(var(--delay) * 3); }
-#centered.bounce #length { animation-delay: calc(var(--delay) * 2); }
+#centered.bounce #display { animation-delay: calc(var(--delay) * 4); }
+#centered.bounce #length { animation-delay: calc(var(--delay) * 3); }
+#centered.bounce #wishlist { animation-delay: calc(var(--delay) * 2); }
 #centered.bounce #copy { animation-delay: calc(var(--delay) * 1); }
 #centered.bounce #generate { animation-delay: 0; }
 
@@ -280,6 +285,6 @@ button {
     opacity: 0.8;
   }
 }
-#centered.copy #length, #centered.copy #copy, #centered.copy #generate {
+#centered.copy #length, #centered.copy #wishlist, #centered.copy #copy, #centered.copy #generate {
   animation: hide 1500ms;
 }

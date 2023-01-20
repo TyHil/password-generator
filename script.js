@@ -2,6 +2,7 @@
 
 const centered = document.getElementById('centered');
 const display = document.getElementById('display');
+const wishlist = document.getElementById('wishlist');
 const length = document.getElementById('length');
 const copy = document.getElementById('copy');
 const generate = document.getElementById('generate');
@@ -27,11 +28,10 @@ function onAnimationEnd(element, times, callback) {
 /* Generate password */
 
 function generatePassword() {
-  wishlist = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!#$%&*?@~';
-  const password = Array.from(crypto.getRandomValues(new Uint32Array(length.value))).map((x) => wishlist[x % wishlist.length]).join('');
+  const password = Array.from(crypto.getRandomValues(new Uint32Array(length.value))).map((x) => wishlist.value[x % wishlist.value.length]).join('');
   setTimeout(function() {
     display.value = password;
-  }, 500);
+  }, 600);
   centered.classList.add('bounce');
   onAnimationEnd(display, 1, function() {
     centered.classList.remove('bounce');
@@ -47,6 +47,8 @@ length.addEventListener('change', function() {
   this.value = Math.max(8, Math.min(this.value, 32));
   generatePassword();
 });
+
+wishlist.addEventListener('change', generatePassword);
 
 copy.addEventListener('click', function() {
   navigator.clipboard.writeText(display.value).then(function() {

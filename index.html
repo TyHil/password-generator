@@ -37,11 +37,14 @@
   </header>
   <main>
     <div id="centered">
-      <input id="display" type="text" readonly>
-      <input id="length" type="number" value="16" min="8" max="32">
-      <div id="buttons">
-        <button id="copy">Copy</button>
-        <button id="generate" class="featured">Generate</button>
+      <input id="display" class="tall" type="text" readonly>
+      <div class="sideways">
+        <input id="length" class="short" type="number" value="16" min="8" max="32">
+        <input id="wishlist" class="short" type="text" value="0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!#$%&*?@~">
+      </div>
+      <div class="sideways">
+        <button id="copy" class="tall">Copy</button>
+        <button id="generate" class="tall featured">Generate</button>
       </div>
     </div>
   </main>
