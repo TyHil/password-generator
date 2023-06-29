@@ -3,7 +3,7 @@
 const centered = document.getElementById('centered');
 const display = document.getElementById('display');
 const wishlist = document.getElementById('wishlist');
-const length = document.getElementById('length');
+const lengthEl = document.getElementById('length');
 const copy = document.getElementById('copy');
 const generate = document.getElementById('generate');
 
@@ -28,7 +28,7 @@ function onAnimationEnd(element, times, callback) {
 /* Generate password */
 
 function generatePassword() {
-  const password = Array.from(crypto.getRandomValues(new Uint32Array(length.value))).map((x) => wishlist.value[x % wishlist.value.length]).join('');
+  const password = Array.from(crypto.getRandomValues(new Uint32Array(lengthEl.value))).map((x) => wishlist.value[x % wishlist.value.length]).join('');
   setTimeout(function() {
     display.value = password;
   }, 600);
@@ -43,7 +43,7 @@ generatePassword();
 
 /* Options */
 
-length.addEventListener('change', function() {
+lengthEl.addEventListener('change', function() {
   this.value = Math.max(8, Math.min(this.value, 32));
   generatePassword();
 });
