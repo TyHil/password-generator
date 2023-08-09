@@ -1,39 +1,5 @@
-html, body {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-
-
-/* prefers-reduced-motion */
-
-@media screen and (prefers-reduced-motion: reduce), (update: slow) {
-  * {
-    animation-duration: 0.001ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.001ms !important;
-  }
-}
-
-
-
 /* Dark Mode */
 
-:root, ::before, ::after { /*Gradient color average: #128A74 10 midpoints first choice*/
-  --light0: #E9F4F2; /*#fff*/
-  --light1: #CCD7D5; /*#dfdfdf*/
-  --light2: #AFBAB8; /*#bfbfbf*/
-  --dark2: #3C4745; /*#404040*/
-  --dark1: #1F2A28; /*#202020*/
-  --dark0: #020D0B; /*#000*/
-  --primary: linear-gradient(90deg, #128e5a, #12858e);
-  --secondary: linear-gradient(90deg, #32ae7a, #32a5ae);
-}
-body {
-  accent-color: #128A74;
-}
 #title, .featured, .featured::after {
   color: var(--dark0);
 }
@@ -45,29 +11,12 @@ body {
 #byLine:hover, #byLine:focus-visible {
   background-color: rgba(255, 255, 255, 0.1);
 }
-.svg {
-  -webkit-filter: var(--lightSVG);
-          filter: var(--lightSVG);
-}
 
 
 
 /* Light Mode */
 
 @media (prefers-color-scheme: light) {
-  :root, ::before, ::after {
-    --light0: #020D0B; /*#000*/
-    --light1: #1F2A28; /*#202020*/
-    --light2: #2D3836; /*#303030*/
-    --dark2: #AFBAB8; /*#bfbfbf*/
-    --dark1: #CCD7D5; /*#dfdfdf*/
-    --dark0: #E9F4F2; /*#fff*/
-    --primary: linear-gradient(90deg, #1bd285, #1bc4d2);
-    --secondary: linear-gradient(90deg, #00b265, #00a4b2);
-  }
-  body {
-    accent-color: #1BCBAC;
-  }
   #title, .featured, .featured::after {
     color: var(--light1);
   }
@@ -79,10 +28,6 @@ body {
   #byLine:hover, #byLine:focus-visible {
     background-color: rgba(0, 0, 0, 0.1);
   }
-  .svg {
-    -webkit-filter: var(--darkSVG);
-            filter: var(--darkSVG);
-  }
 }
 
 
@@ -90,9 +35,6 @@ body {
 /* Body */
 
 body {
-  font-family: Tahoma, sans-serif;
-  background-color: var(--dark0);
-  color: var(--light0);
   overflow-y: hidden;
 }
 input {
@@ -120,12 +62,9 @@ header {
 #title {
   text-align: center;
 }
-#title, #byLine {
-  margin: 0;
-}
 #byLine {
   display: inline-block;
-  line-height: 1.6rem;
+  height: 3rem;
   padding: 0.7rem 1rem 0.7rem 1rem;
   border-radius: 1.5rem;
   transition: background-color 200ms;
