@@ -1,15 +1,8 @@
 /* Tab Icon */
 
-const tabicon = document.querySelector('link[rel="icon"]');
-window
-  .matchMedia('(prefers-color-scheme: light)')
-  .addEventListener('change', function(event) {
-    if (event.matches) {
-      tabicon.href = 'password-generator/tabicon-light.png';
-    } else {
-      tabicon.href = 'password-generator/tabicon.png';
-    }
-  });
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+  document.querySelector('link[rel="icon"]').href = 'password-generator/tabicon-light.png';
+}
 
 
 
