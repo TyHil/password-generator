@@ -215,6 +215,11 @@ input, input.large {
 .featured, .featured::after {
   color: var(--dark0);
 }
+@media (prefers-color-scheme: light) {
+  .featured, .featured::after {
+    color: var(--light0);
+  }
+}
 .featured::before, .featured::after {
   position: absolute;
   transition: opacity 200ms;
