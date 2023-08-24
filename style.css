@@ -203,30 +203,33 @@ input, input.large {
 
 
 
-/* Gradient button */
+/* Featured Buttons */
 
-.featured {
+button.featured, a.button.featured {
   background-image: var(--primary);
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.featured, .featured::after {
-  color: var(--dark0);
+button.featured.disabled, a.button.featured.disabled, button.featured:disabled {
+  background: var(--dark2);
+  color: var(--light2);
+  cursor: default;
 }
-@media (prefers-color-scheme: light) {
-  .featured, .featured::after {
-    color: var(--light0);
-  }
+button.featured.disabled:hover::before, button.featured:disabled:hover::before, a.button.featured.disabled:hover::before, button.featured.disabled:focus-visible::before, button.featured:disabled:focus-visible::before, a.button.featured.disabled:focus-visible::before, button.featured.disabled:hover::after, button.featured:disabled:hover::after, a.button.featured.disabled:hover::after, button.featured.disabled:focus-visible::after, button.featured:disabled:focus-visible::after, a.button.featured.disabled:focus-visible::after {
+  opacity: 0;
 }
-.featured::before, .featured::after {
+button.featured::before, a.button.featured::before, button.featured::after, a.button.featured::after {
   position: absolute;
   transition: opacity 200ms;
   opacity: 0;
   border-radius: 1.5rem;
 }
-.featured::before{
+button.small.featured::before, a.button.small.featured::before, button.small.featured::after, a.button.small.featured::after {
+  border-radius: 0.25rem;
+}
+button.featured::before, a.button.featured::before {
   content: "";
   top: 0;
   right: 0;
@@ -234,8 +237,22 @@ input, input.large {
   left: 0;
   background-image: var(--secondary);
 }
-.featured:hover::before, .featured:focus-visible::before, .featured:hover::after, .featured:focus-visible::after {
+button.featured, a.button.featured, button.featured::after, a.button.featured::after {
+  color: var(--dark0);
+}
+@media (prefers-color-scheme: light) {
+  button.featured, a.button.featured, button.featured::after, a.button.featured::after {
+    color: var(--light0);
+  }
+}
+button.featured:hover::before, a.button.featured:hover::before, button.featured:focus-visible::before, a.button.featured:focus-visible::before, button.featured:hover::after, a.button.featured:hover::after, button.featured:focus-visible::after, a.button.featured:focus-visible::after {
   opacity: 1;
+}
+
+/*Extra*/
+
+#generate::after {
+  content: "Generate";
 }
 
 
@@ -272,9 +289,6 @@ main {
 button {
   word-wrap: break-word;
   cursor: pointer;
-}
-#generate::after {
-  content: "Generate";
 }
 
 
