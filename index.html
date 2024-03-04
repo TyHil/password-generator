@@ -1,80 +1,91 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" prefix="og: http://ogp.me/ns#">
+  <head>
+    <!-- HTML Meta Tags -->
+    <title>Password Generator</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Generate passwords." />
+    <meta name="canonical" href="https://tylergordonhill.com/password-generator" />
+    <meta name="theme-color" content="#128A74" />
 
-<head>
-  <!-- HTML Meta Tags -->
-  <title>Password Generator</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Generate passwords." />
-  <meta name="canonical" href="https://tylergordonhill.com/password-generator" />
-  <meta name="theme-color" content="#128A74" />
-  
-  <!-- Open Graph Meta Tags -->
-  <meta property="og:title" content="Password Generator" />
-  <meta property="og:description" content="Generate passwords."/>
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://tylergordonhill.com/password-generator" />
-  <meta property="og:image" content="https://tylergordonhill.com/password-generator/linkpreview.png" />
-  <meta property="og:image:type" content="image/png">
-  <meta property="og:image:alt" content="Screenshot of the website displaying the generation fields and a password. ">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Password Generator" />
+    <meta property="og:description" content="Generate passwords." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tylergordonhill.com/password-generator" />
+    <meta
+      property="og:image"
+      content="https://tylergordonhill.com/password-generator/linkpreview.png"
+    />
+    <meta property="og:image:type" content="image/png" />
+    <meta
+      property="og:image:alt"
+      content="Screenshot of the website displaying the generation fields and a password. "
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
 
-  <!-- Twitter Meta Tags -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:domain" content="tylergordonhill.com" />
-  
-  <!-- Link Tags -->
-  <link rel="icon" href="password-generator/tabicon.png" />
-  <link href="https://tylergordonhill.com/global.css" rel="stylesheet" type="text/css" />
-  <link href="password-generator/style.css" rel="stylesheet" type="text/css" />
-</head>
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:domain" content="tylergordonhill.com" />
 
-<body>
-  <header>
-    <h2 id="title">Password Generator</h2>
-    <a id="byLine" href="/">Tyler Gordon Hill</a>
-  </header>
+    <!-- Link Tags -->
+    <link rel="icon" href="password-generator/tabicon.png" />
+    <link href="https://tylergordonhill.com/global.css" rel="stylesheet" type="text/css" />
+    <link href="password-generator/style.css" rel="stylesheet" type="text/css" />
+  </head>
 
-  <main>
-    <div id="centered">
-      <input id="display" class="large" type="text" readonly>
-      <div class="sideways">
-        <input id="length" class="medium" type="number" value="16" min="8" max="32">
-        <input id="wishlist" class="medium" type="text" value="0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!#$%&*?@~">
+  <body>
+    <header>
+      <h2 id="title">Password Generator</h2>
+      <a id="byLine" href="/">Tyler Gordon Hill</a>
+    </header>
+
+    <main>
+      <div id="centered">
+        <input id="display" class="large" type="text" readonly />
+        <div class="sideways">
+          <input id="length" class="medium" type="number" value="16" min="8" max="32" />
+          <input
+            id="wishlist"
+            class="medium"
+            type="text"
+            value="0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!#$%&*?@~"
+          />
+        </div>
+        <div class="sideways">
+          <button id="copy" class="large">Copy</button>
+          <button id="generate" class="large featured">Generate</button>
+        </div>
       </div>
-      <div class="sideways">
-        <button id="copy" class="large">Copy</button>
-        <button id="generate" class="large featured">Generate</button>
+    </main>
+
+    <footer>
+      <div>
+        <p><strong>Contact and Social</strong></p>
+        <a href="mailto:tylergordonhill@gmail.com" target="_blank" rel="noopener">Email</a>
+        <a href="http://www.linkedin.com/in/tylergordonhill" target="_blank" rel="noopener"
+          >LinkedIn</a
+        >
+        <a href="https://github.com/TyHil" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://replit.com/@TylerGHill" target="_blank" rel="noopener">Replit</a>
+        <a href="https://thangs.com/TylerHill" target="_blank" rel="noopener">Thangs</a>
       </div>
-    </div>
-  </main>
+      <div>
+        <p><strong>Subsites</strong></p>
+        <a href="/set-operations-for-spotify">Set Operations for Spotify</a>
+        <a href="/typewriter-formatting">Typewriter Formatting</a>
+        <a href="/cah-maker">Cards Against Humanity Card Maker</a>
+        <a href="/response-display">Response Display</a>
+        <a href="/password-generator">Password Generator</a>
+        <a href="/recipes">Recipes</a>
+      </div>
+    </footer>
 
-  <footer>
-    <div>
-      <p><strong>Contact and Social</strong></p>
-      <a href="mailto:tylergordonhill@gmail.com" target="_blank" rel="noopener">Email</a>
-      <a href="http://www.linkedin.com/in/tylergordonhill" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://github.com/TyHil" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://replit.com/@TylerGHill" target="_blank" rel="noopener">Replit</a>
-      <a href="https://thangs.com/TylerHill" target="_blank" rel="noopener">Thangs</a>
-    </div>
-    <div>
-      <p><strong>Subsites</strong></p>
-      <a href="/set-operations-for-spotify">Set Operations for Spotify</a>
-      <a href="/typewriter-formatting">Typewriter Formatting</a>
-      <a href="/cah-maker">Cards Against Humanity Card Maker</a>
-      <a href="/response-display">Response Display</a>
-      <a href="/password-generator">Password Generator</a>
-      <a href="/recipes">Recipes</a>
-    </div>
-  </footer>
-
-  <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-analytics-compat.js"></script>
-  <script src="https://tylergordonhill.com/global.js"></script>
-  <script src="password-generator/script.js"></script>
-</body>
-
+    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-analytics-compat.js"></script>
+    <script src="https://tylergordonhill.com/global.js"></script>
+    <script src="password-generator/script.js"></script>
+  </body>
 </html>
