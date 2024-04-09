@@ -1,14 +1,12 @@
 # password-generator
 
-[![Run on Repl.it](https://repl.it/badge/github/TyHil/password-generator)](https://repl.it/github/TyHil/password-generator)
-
-## Description
-
 Website to generate passwords available at [tylergordonhill.com/password-generator](https://tylergordonhill.com/password-generator).
 
 [Style guide](https://github.com/TyHil/personal-website-styles)
 
-Note: remove `/password-generator` in HTML file paths, this is needed for hosting but not standalone running.
+## Set-up
+
+Instructions to run available in the [parent repository](https://github.com/TyHil/personal-website#set-up).
 
 ## License
 
